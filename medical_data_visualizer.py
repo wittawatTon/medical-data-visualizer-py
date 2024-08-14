@@ -23,12 +23,11 @@ def draw_cat_plot():
     df_cat.rename(columns={'size': 'total'}, inplace=True)
 
     # 7
-    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', kind='bar', data=df_cat)
+    tmp=sns.catplot(x='variable', y='total', hue='value', col='cardio', kind='bar', data=df_cat)
+
 
     # 8
-    fig.savefig('catplot.png')
-
-
+    fig = tmp.fig
 
     # 9
     fig.savefig('catplot.png')
